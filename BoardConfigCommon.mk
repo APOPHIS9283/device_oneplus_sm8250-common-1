@@ -74,9 +74,6 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
 
-# Treble
-BOARD_VNDK_VERSION := current
-
 # A/B
 AB_OTA_UPDATER := true
 

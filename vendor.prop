@@ -183,6 +183,9 @@ vendor.gralloc.disable_ubwc=0
 debug.cpurend.vsync=false
 debug.hwui.renderer=skiagl
 
+# Incremental FS
+ro.incremental.enable=true
+
 # Keystore
 ro.hardware.keystore_desede=true
 

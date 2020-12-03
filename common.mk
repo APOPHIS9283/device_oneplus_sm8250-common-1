@@ -206,6 +206,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ftm_power_config.sh \
     init.class_main.sh \
+    init.color.rc \
     init.crda.sh \
     init.cust.rc \
     init.mdm.sh \
@@ -578,3 +579,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.set_touch_timer_ms=200 \
     ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.wcg_composition_dataspace=143261696
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.sf.native_mode=0

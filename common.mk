@@ -274,8 +274,7 @@ EXTRA_FOD_ANIMATIONS := true
 
 # Prebuilts
 PRODUCT_PACKAGES += \
-    Adaway \
-    Sounds
+    Adaway
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -329,10 +328,6 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml \
     libipanat \
     liboffloadhal
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.oneplus_kona
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -461,10 +456,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     KeyHandler \
     tri-state-key_daemon
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # Update engine
 PRODUCT_PACKAGES += \

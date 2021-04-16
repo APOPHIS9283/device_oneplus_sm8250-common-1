@@ -234,6 +234,9 @@ ro.com.android.dataroaming=true
 # Seamless transfer
 sys.fflag.override.settings_seamless_transfer=true
 
+# Seamless transfer
+sys.fflag.override.settings_seamless_transfer=true
+
 # Sensors
 persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.sync_request=true

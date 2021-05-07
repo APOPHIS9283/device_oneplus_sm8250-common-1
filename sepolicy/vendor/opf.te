@@ -8,3 +8,4 @@ init_daemon_domain(opf)
 allow opf device:dir create_dir_perms;
 allow opf device:file create_file_perms;
 allow opf opf_file:file create_file_perms;
+allow opf self:capability sys_admin;

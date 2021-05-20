@@ -25,7 +25,7 @@
     <integer name="config_fingerprintSensorLocation">1</integer>
 
     <!-- Smart charging -->
-    <bool name="config_supportSmartCharging">true</bool>
+    <bool name="config_adaptiveChargingSysfsNode">true</bool>
 
     <!-- Whether to show the Preference for Touch Sensitivity -->
     <bool name="config_show_touch_sensitivity">true</bool>

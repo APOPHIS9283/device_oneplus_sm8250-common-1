@@ -57,8 +57,7 @@ import org.evolution.device.DeviceSettings.Constants;
 import org.evolution.device.DeviceSettings.DeviceSettings;
 import org.evolution.device.DeviceSettings.R;
 
-import vendor.oneplus.camera.CameraHIDL.V1_0.IOnePlusCameraProvider;
-
+import vendor.oneplus.hardware.camera.V1_0.IOnePlusCameraProvider;
 
 public class KeyHandler implements DeviceKeyHandler {
 
@@ -135,12 +134,10 @@ public class KeyHandler implements DeviceKeyHandler {
             mVibrator = null;
         }
 
-        IntentFilter systemStateFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
-        systemStateFilter.addAction(Intent.ACTION_SCREEN_OFF);
-        mContext.registerReceiver(mSystemStateReceiver, systemStateFilter);
-
-        isOPCameraAvail = Utils.isAvailableApp("com.oneplus.camera", context);
-        if (isOPCameraAvail) {
+        if (PackageUtils.isAvailableApp(CLIENT_PACKAGE_NAME, mContext)) {
+            IntentFilter systemStateFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
+            systemStateFilter.addAction(Intent.ACTION_SCREEN_OFF);
+            mContext.registerReceiver(mSystemStateReceiver, systemStateFilter);
             mClientObserver = new ClientPackageNameObserver(CLIENT_PACKAGE_PATH);
             mClientObserver.startWatching();
         }

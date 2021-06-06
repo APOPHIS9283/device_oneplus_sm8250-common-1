@@ -66,6 +66,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno650
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
+TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
@@ -193,6 +194,7 @@ VENDOR_SECURITY_PATCH := 2021-06-01
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
+SELINUX_IGNORE_NEVERALLOWS := true
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 

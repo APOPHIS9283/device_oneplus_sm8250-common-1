@@ -23,6 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
 
+# Inherit OP Camera & gallery packages
+$(call inherit-product, vendor/oneplus/camera/sm8250/config.mk)
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -196,6 +199,7 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
+    libcamera2ndk_vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 # Common init scripts
@@ -203,7 +207,6 @@ PRODUCT_PACKAGES += \
     ftm_power_config.sh \
     init.class_main.sh \
     init.crda.sh \
-    init.opcamera.rc \
     init.cust.rc \
     init.mdm.sh \
     init.oem.debug.rc \
@@ -211,6 +214,7 @@ PRODUCT_PACKAGES += \
     init.oem.rc \
     init.oem.sec.rc \
     init.oem_ftm.rc \
+    init.opcamera.rc \
     init.oplus_chg.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
@@ -324,7 +328,10 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    libhwbinder.vendor
+    libhidltransport.vendor \
+    libhidltransport \
+    libhwbinder.vendor \
+    libhwbinder
 
 # FOSS Config
 PRODUCT_COPY_FILES += \

@@ -1,7 +1,6 @@
 r_dir_file(vendor_sensors, sysfs_project_info)
 r_dir_file(vendor_sensors, oem_file)
-
-allow vendor_sensors oem_file:dir search;
-allow vendor_sensors oem_file:file { getattr open read };
 allow vendor_sensors sysfs_project_info:dir search;
 allow vendor_sensors sysfs_project_info:file { getattr open read };
+allow vendor_sensors oem_file:dir { search getattr read };
+allow vendor_sensors oem_file:file { read open map getattr };

@@ -182,6 +182,9 @@ on boot
     # FPS Info
     chown system graphics /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps
     chmod 0666 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps
+    # USB 2.0 Force Fast Charge
+    chown system system /sys/kernel/fast_charge/force_fast_charge
+    chmod 0666 /sys/kernel/fast_charge/force_fast_charge
 
     # Battery Health
     chown system system /sys/class/power_supply/bms/charge_full
@@ -223,7 +226,6 @@ on boot
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
-    # Set the console loglevel to < KERN_INFO
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "6 6 1 7"
 

@@ -21,6 +21,7 @@
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -122,6 +123,18 @@
         <!-- Auto HBM service -->
         <service android:name="org.evolution.device.DeviceSettings.AutoHBMService"
 		 android:exported="false" />
+
+        <!-- USB 2.0 fc Tile -->
+        <service
+            android:name=".USB2FastChargeTileService"
+            android:icon="@drawable/ic_usb2_fc"
+            android:label="@string/usb2_fc_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
                  
         <!-- Search indexing -->
         <provider

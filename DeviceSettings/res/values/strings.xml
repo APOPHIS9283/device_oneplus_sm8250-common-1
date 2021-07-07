@@ -15,6 +15,8 @@
     <string name="device_title">OnePlus Settings</string>
     <string name="device_summary">Adjust OnePlus specific device settings</string>
     <string name="display_title">Display</string>
+    <string name="game_mode_title">Game Mode</string>
+    <string name="game_mode_summary">Force enable 240 Hz sample rate</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">High brightness mode</string>
     <string name="auto_hbm_summary"></string>

@@ -75,6 +75,8 @@ public class DeviceSettings extends PreferenceFragment
 
     public static final String KEY_USB2_SWITCH = "usb2_fast_charge";
 
+    public static final String KEY_GAME_SWITCH = "game_mode";
+
     private static final String SELINUX_CATEGORY = "selinux";
     private static final String PREF_SELINUX_MODE = "selinux_mode";
     private static final String PREF_SELINUX_PERSISTENCE = "selinux_persistence";
@@ -82,6 +84,7 @@ public class DeviceSettings extends PreferenceFragment
     private static TwoStatePreference mEnableDolbyAtmos;
     private static TwoStatePreference mHBMModeSwitch;
     private static TwoStatePreference mAutoHBMSwitch;
+    private static TwoStatePreference mGameModeSwitch;
     private static TwoStatePreference mUSB2FastChargeModeSwitch;
     private static TwoStatePreference mDCModeSwitch;
     private static TwoStatePreference mRefreshRate;
@@ -134,7 +137,12 @@ public class DeviceSettings extends PreferenceFragment
         mHBMModeSwitch.setEnabled(HBMModeSwitch.isSupported());
         mHBMModeSwitch.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceSettings.KEY_HBM_SWITCH, false));
         mHBMModeSwitch.setOnPreferenceChangeListener(this);
-        
+
+        mGameModeSwitch = (TwoStatePreference) findPreference(KEY_GAME_SWITCH);
+        mGameModeSwitch.setEnabled(GameModeSwitch.isSupported());
+        mGameModeSwitch.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceSettings.KEY_GAME_SWITCH, false));
+        mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch());
+
         mUSB2FastChargeModeSwitch = (TwoStatePreference) findPreference(KEY_USB2_SWITCH);
         mUSB2FastChargeModeSwitch.setEnabled(USB2FastChargeModeSwitch.isSupported());
         mUSB2FastChargeModeSwitch.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceSettings.KEY_USB2_SWITCH, false));

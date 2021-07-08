@@ -151,9 +151,6 @@
     <!-- FPSInfoService FPS node file path -->
     <string name="config_fpsInfoSysNode" translatable="false">/sys/class/drm/sde-crtc-0/measured_fps</string>
 
-    <!-- Enable face auth only when swiping security view -->
-    <bool name="config_faceAuthOnlyOnSecurityView">true</bool>
-
     <!-- The list of components which should be automatically disabled for a specific device. -->
     <string-array name="config_deviceDisabledComponents" translatable="false">
     <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>

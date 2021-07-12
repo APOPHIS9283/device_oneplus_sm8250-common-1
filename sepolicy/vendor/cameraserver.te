@@ -6,3 +6,6 @@ binder_call(cameraserver, hal_cameraHIDL_default)
 
 # Data File
 type evolution_data_file, file_type, data_file_type,  core_data_file_type;
+allow cameraserver evolution_data_file:file rw_file_perms;
+allow cameraserver evolution_data_file:dir write;
+allow cameraserver system_data_file:dir { add_name write create };

@@ -2,3 +2,4 @@ allow bluetooth incremental_prop:file read;
 allow bluetooth incremental_prop:file open;
 allow bluetooth incremental_prop:file map;
 allow bluetooth incremental_prop:file getattr;
+get_prop(bluetooth, incremental_prop)

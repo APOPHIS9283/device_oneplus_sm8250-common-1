@@ -3,3 +3,6 @@ allow cameraserver init:unix_stream_socket connectto;
 allow cameraserver system_prop:property_service set;
 
 binder_call(cameraserver, hal_cameraHIDL_default)
+
+# Data File
+type evolution_data_file, file_type, data_file_type,  core_data_file_type;

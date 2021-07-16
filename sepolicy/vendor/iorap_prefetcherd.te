@@ -1,4 +1,3 @@
-allow iorap_prefetcherd media_rw_data_file:dir search;
 allow iorap_prefetcherd system_app_data_file:dir search;
 allow iorap_prefetcherd system_app_data_file:file read;
 allow iorap_prefetcherd resourcecache_data_file:dir search;
@@ -9,7 +8,4 @@ allow iorap_prefetcherd backup_data_file:dir read;
 allow iorap_prefetcherd radio_data_file:file read;
 allow iorap_prefetcherd resourcecache_data_file:file read;
 allow iorap_prefetcherd vendor_file:file read;
-allow iorap_prefetcherd vendor_file:file open;
-allow iorap_prefetcherd media_rw_data_file:file { read open };
-allow iorap_prefetcherd vendor_file:file { read open };
-allow iorap_prefetcherd hal_cameraHIDL_default_exec:file { read open };
+allow iorap_prefetcherd havoc_data_file:file { read open };

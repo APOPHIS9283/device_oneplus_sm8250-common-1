@@ -470,6 +470,15 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=Carme.ogg \
     ro.config.alarm_alert=Argon.ogg
 
+# Spectrum Support
+PRODUCT_PACKAGES += \
+    init.spectrum.rc \
+    init.spectrum.sh
+
+# Spectrum Support
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.spectrum.profile=0
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \

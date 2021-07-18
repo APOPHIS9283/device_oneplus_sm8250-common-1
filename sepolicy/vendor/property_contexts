@@ -95,3 +95,6 @@ persist.vendor.apsSN.algo.enable                      u:object_r:ctl_default_pro
 ro.ril.supportLTE               u:object_r:radio_prop:s0
 ro.vendor.ril.svlte1x           u:object_r:radio_prop:s0
 ro.vendor.ril.svdo              u:object_r:radio_prop:s0
+
+# Spectrum
+persist.spectrum.profile               u:object_r:spectrum_prop:s0

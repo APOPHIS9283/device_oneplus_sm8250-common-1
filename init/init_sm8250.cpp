@@ -59,6 +59,8 @@ void load_dalvikvm_properties() {
   property_override("dalvik.vm.heapgrowthlimit", "512m");
   property_override("dalvik.vm.heaptargetutilization", "0.40");
   property_override("dalvik.vm.heapmaxfree", "64m");
+  property_override("dalvik.vm.heapsize", "640m");
+  property_override("dalvik.vm.heapminfree", "16m");
     }
   else if(sys.totalram > 6144ull * 1024 * 1024) {
     // from - phone-xhdpi-8192-dalvik-heap.mk
@@ -66,6 +68,8 @@ void load_dalvikvm_properties() {
     property_override("dalvik.vm.heapgrowthlimit", "256m");
     property_override("dalvik.vm.heaptargetutilization", "0.46");
     property_override("dalvik.vm.heapmaxfree", "48m");
+    property_override("dalvik.vm.heapsize", "512m");
+    property_override("dalvik.vm.heapminfree", "8m");
     }
   else {
     // from - phone-xhdpi-6144-dalvik-heap.mk
@@ -73,9 +77,9 @@ void load_dalvikvm_properties() {
     property_override("dalvik.vm.heapgrowthlimit", "256m");
     property_override("dalvik.vm.heaptargetutilization", "0.5");
     property_override("dalvik.vm.heapmaxfree", "32m");
+    property_override("dalvik.vm.heapsize", "512m");
+    property_override("dalvik.vm.heapminfree", "8m");
   }
-  property_override("dalvik.vm.heapsize", "512m");
-  property_override("dalvik.vm.heapminfree", "8m");
 }
 
 void vendor_load_properties() {
